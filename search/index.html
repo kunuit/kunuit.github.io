@@ -31,7 +31,7 @@
     <!-- meta -->
 
 
-<title>HI | kun&#39;s note</title>
+<title>HI | kunion</title>
 
 
 
@@ -43,9 +43,9 @@
  
     <meta name="description" content="kun&#39;s personal blog">
 <meta property="og:type" content="website">
-<meta property="og:title" content="kun&#39;s note">
+<meta property="og:title" content="kunion">
 <meta property="og:url" content="https://kunuit.github.io/search/index.html">
-<meta property="og:site_name" content="kun&#39;s note">
+<meta property="og:site_name" content="kunion">
 <meta property="og:description" content="kun&#39;s personal blog">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-12-01T16:50:40.064Z">
@@ -95,9 +95,9 @@
                 
                     <a href="/archives/" class="navbar-menu button">Archives</a>
                 
-                    <a href="/friends/" class="navbar-menu button">Friends</a>
+                    <a href="/friends/" class="navbar-menu button">Links</a>
                 
-                    <a href="/page/" class="navbar-menu button">Page</a>
+                    <a href="/page/" class="navbar-menu button">About</a>
                 
             </div>
         
@@ -133,9 +133,9 @@
                 
                     <a href="/archives/" class="dropdown-menu button">Archives</a>
                 
-                    <a href="/friends/" class="dropdown-menu button">Friends</a>
+                    <a href="/friends/" class="dropdown-menu button">Links</a>
                 
-                    <a href="/page/" class="dropdown-menu button">Page</a>
+                    <a href="/page/" class="dropdown-menu button">About</a>
                 
             </div>
         
@@ -190,7 +190,7 @@
     
         
         <p class="footer-copyright">
-            Copyright © 2020 <a href="/">kun&#39;s note</a>
+            Copyright © 2020 <a href="/">kunion</a>
         </p>
     
     
@@ -198,7 +198,15 @@
 </footer>
 
         </div>
-         
+        
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-lazyload/17.1.2/lazyload.min.js"></script>
+    <script>
+        window.lazyLoadOptions = {
+            elements_selector: ".lazy",
+            threshold: 0
+        };
+    </script>
+ 
 
  
     <script>
@@ -242,7 +250,7 @@
 <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.4.1/dist/jquery.fancybox.min.js"></script>
 
     <script>
-        let lazyloadT = Boolean('false'),
+        let lazyloadT = Boolean('true'),
             auto_fancybox = Boolean('true')
         if (auto_fancybox) {
             $(".post__content").find('img').each(function () {
