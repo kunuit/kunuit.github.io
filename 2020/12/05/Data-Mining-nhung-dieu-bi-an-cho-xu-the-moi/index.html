@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+
+    
+
+    <!-- 渲染优化 -->
+    <meta name="renderer" content="webkit">
+    <meta name="force-rendering" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="HandheldFriendly" content="True" >
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!--icon-->
+
+    
+        <link rel="shortcut icon" href="https://res.cloudinary.com/dypezmi3x/image/upload/v1619285500/blog/pngwing.com_qserka.png">
+    
+    
+        <link rel="icon" type="image/png" sizes="16x16" href="https://res.cloudinary.com/dypezmi3x/image/upload/v1619285500/blog/pngwing.com_qserka.png">
+    
+    
+        <link rel="icon" type="image/png" sizes="32x32" href="https://res.cloudinary.com/dypezmi3x/image/upload/v1619285500/blog/pngwing.com_1_iyn0du.png">
+    
+    
+        <link rel="apple-touch-icon" sizes="180x180" href="https://res.cloudinary.com/dypezmi3x/image/upload/v1619285500/blog/pngwing.com_2_ql7pjp.png">
+    
+    
+        <link rel="mask-icon" href="https://res.cloudinary.com/dypezmi3x/image/upload/v1619285500/blog/pngwing.com_2_ql7pjp.png">
+    
+
+
+    <!-- meta -->
+
+
+<title>Data Mining, những điều bí ẩn cho xu thế mới | kunion</title>
+
+
+    <meta name="keywords" content="đồ án, data mining, python, jupyter notebook, mystory">
+
+
+
+
+    <!-- OpenGraph -->
+ 
+    <meta name="description" content="Khai Phá  ✈ Lời đầu tiên là phải nói lời cảm ơn tới phòng đạo tạo của trường mình (UIT). Đồng thời nhân phẩm khá ổn nên đã đăng ký được môn Khai thác dữ liệu vào kỳ 5 này 😋.   ✈ Trước khi">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Data Mining, những điều bí ẩn cho xu thế mới">
+<meta property="og:url" content="https://kunuit.github.io/2020/12/05/Data-Mining-nhung-dieu-bi-an-cho-xu-the-moi/index.html">
+<meta property="og:site_name" content="kunion">
+<meta property="og:description" content="Khai Phá  ✈ Lời đầu tiên là phải nói lời cảm ơn tới phòng đạo tạo của trường mình (UIT). Đồng thời nhân phẩm khá ổn nên đã đăng ký được môn Khai thác dữ liệu vào kỳ 5 này 😋.   ✈ Trước khi">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-12-05T14:31:38.000Z">
+<meta property="article:modified_time" content="2022-09-26T13:44:53.060Z">
+<meta property="article:author" content="kunion">
+<meta property="article:tag" content="đồ án">
+<meta property="article:tag" content="data mining">
+<meta property="article:tag" content="python">
+<meta property="article:tag" content="jupyter notebook">
+<meta property="article:tag" content="mystory">
+<meta name="twitter:card" content="summary_large_image">
+
+
+    
+<link rel="stylesheet" href="/css/style/main.css">
+ 
+
+    
+    
+        <link rel="stylesheet" id="hl-default-theme" href="/css/highlight/default.css" media="none" >
+        
+            <link rel="stylesheet" id="hl-dark-theme" href="/css/highlight/dark.css" media="none">
+        
+    
+
+    
+    
+
+    
+    
+<link rel="stylesheet" href="/css/style/dark.css">
+
+    
+<script src="/js/darkmode.js"></script>
+
+
+
+     
+
+    <!-- custom head -->
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+    <body>
+        <div id="app" tabindex="-1">
+            <header class="header">
+    <div class="header__left">
+        <a href="/" class="button">
+            <span class="logo__text">Kunion</span>
+        </a>
+    </div>
+    <div class="header__right">
+        
+            <div class="navbar__menus">
+                
+                    <a href="/" class="navbar-menu button">Home</a>
+                
+                    <a href="/tags/" class="navbar-menu button">Tags</a>
+                
+                    <a href="/archives/" class="navbar-menu button">Archives</a>
+                
+                    <a href="/friends/" class="navbar-menu button">Contracts</a>
+                
+                    <a href="/page/" class="navbar-menu button">Page</a>
+                
+            </div>
+        
+        
+        
+    <a href="/search/" id="btn-search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="24" height="24" fill="currentColor" stroke="currentColor" stroke-width="32"><path d="M192 448c0-141.152 114.848-256 256-256s256 114.848 256 256-114.848 256-256 256-256-114.848-256-256z m710.624 409.376l-206.88-206.88A318.784 318.784 0 0 0 768 448c0-176.736-143.264-320-320-320S128 271.264 128 448s143.264 320 320 320a318.784 318.784 0 0 0 202.496-72.256l206.88 206.88 45.248-45.248z"></path></svg>
+    </a>
+
+
+        
+        
+    <a href="javaScript:void(0);" id="btn-toggle-dark">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+    </a>
+
+
+        
+            <a class="dropdown-icon button" id="btn-dropdown" tabindex="0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width='24' height='24' fill="none" stroke="currentColor" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round"><path fill="currentColor" d="M3.314,4.8h13.372c0.41,0,0.743-0.333,0.743-0.743c0-0.41-0.333-0.743-0.743-0.743H3.314c-0.41,0-0.743,0.333-0.743,0.743C2.571,4.467,2.904,4.8,3.314,4.8z M16.686,15.2H3.314c-0.41,0-0.743,0.333-0.743,0.743s0.333,0.743,0.743,0.743h13.372c0.41,0,0.743-0.333,0.743-0.743S17.096,15.2,16.686,15.2z M16.686,9.257H3.314c-0.41,0-0.743,0.333-0.743,0.743s0.333,0.743,0.743,0.743h13.372c0.41,0,0.743-0.333,0.743-0.743S17.096,9.257,16.686,9.257z"></path></svg></a>
+            <div class="dropdown-menus" id="dropdown-menus">
+                
+                    <a href="/" class="dropdown-menu button">Home</a>
+                
+                    <a href="/tags/" class="dropdown-menu button">Tags</a>
+                
+                    <a href="/archives/" class="dropdown-menu button">Archives</a>
+                
+                    <a href="/friends/" class="dropdown-menu button">Contracts</a>
+                
+                    <a href="/page/" class="dropdown-menu button">Page</a>
+                
+            </div>
+        
+    </div>
+</header>
+
+
+            <main class="main">
+    
+
+<div class="post-title">
+    <h1 class="post-title__text">
+        Data Mining, những điều bí ẩn cho xu thế mới
+    </h1>
+    <div class="post-title__meta">
+        <a href="/archives/2020/12/" class="post-meta__date button">2020-12-05</a>
+        
+ 
+        
+    
+    
+
+
+ 
+
+ 
+    </div>
+</div>
+
+
+    <aside class="post-side">
+        <div class="post-side__toc">
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Khai-Pha"><span class="toc-number">1.</span> <span class="toc-text">Khai Phá</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Van-Hanh"><span class="toc-number">2.</span> <span class="toc-text">Vận Hành</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Chuan-bi"><span class="toc-number">2.1.</span> <span class="toc-text">Chuẩn bị</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Qua-trinh-chay-cong-viec-copy-amp-paste"><span class="toc-number">2.2.</span> <span class="toc-text">Quá trình chạy công việc copy &amp; paste</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#De-tai"><span class="toc-number">2.2.1.</span> <span class="toc-text">Đề tài:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Qua-trinh"><span class="toc-number">2.2.2.</span> <span class="toc-text">Quá trình:</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ket-Qua"><span class="toc-number">3.</span> <span class="toc-text">Kết Quả</span></a></li></ol>
+        </div>
+    </aside>
+    <a class="btn-toc button" id="btn-toc" tabindex="0">
+        <svg viewBox="0 0 1024 1024" width="32" height="32" xmlns="http://www.w3.org/2000/svg">
+            <path d="M128 256h64V192H128zM320 256h576V192H320zM128 544h64v-64H128zM320 544h576v-64H320zM128 832h64v-64H128zM320 832h576v-64H320z" fill="currentColor"></path>
+        </svg>
+    </a>
+    <div class="toc-menus" id="toc-menus">
+        <div class="toc-title">Article Directory</div>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Khai-Pha"><span class="toc-number">1.</span> <span class="toc-text">Khai Phá</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Van-Hanh"><span class="toc-number">2.</span> <span class="toc-text">Vận Hành</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Chuan-bi"><span class="toc-number">2.1.</span> <span class="toc-text">Chuẩn bị</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Qua-trinh-chay-cong-viec-copy-amp-paste"><span class="toc-number">2.2.</span> <span class="toc-text">Quá trình chạy công việc copy &amp; paste</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#De-tai"><span class="toc-number">2.2.1.</span> <span class="toc-text">Đề tài:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Qua-trinh"><span class="toc-number">2.2.2.</span> <span class="toc-text">Quá trình:</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ket-Qua"><span class="toc-number">3.</span> <span class="toc-text">Kết Quả</span></a></li></ol>
+    </div>
+
+
+<article class="post post__with-toc content-card">
+    <div class="post__header"></div>
+    <div class="post__content">
+         <!-- hình ảnh và châm ngôn về data mining -->
+ <p align='center'>
+    <image src="https://i.imgflip.com/1lcf4o.jpg" alt="image">
+ </p>
+
+<h2 id="Khai-Pha"><a href="#Khai-Pha" class="headerlink" title="Khai Phá"></a>Khai Phá</h2><p>  ✈ Lời đầu tiên là phải nói lời cảm ơn tới phòng đạo tạo của trường mình (UIT). Đồng thời nhân phẩm khá ổn nên đã đăng ký được môn <strong>Khai thác dữ liệu</strong> vào kỳ 5 này 😋.</p>
+<p>  ✈ Trước khi va vào giai điệu data-mining này thì mình ứ biết nó là cái gì lun 😢 mà chắc hầu hết những bạn trong lớp cũng vậy (tự an ủi). Chưa biết gì về Python, jupeter notebook, các thuật toán regression, classification,… Và nhiều thứ mới lạ khác. Nhưng thực sự khi trải qua và vọc về nó thì mới nhận ra “uầy hay quá trời lun” nào là sức mạnh của thằng python để chạy những bài toán đại số tuyến tính, tích phân,… mặc dù mình toàn sử dụng thư viện (🤫). Đặc biệt tính ứng dụng của cái này là đỉnh của chóp, nó tồn tại xung quanh ta. Những ví dụ ta có thể hình dung kết quả đạt được là:</p>
+<blockquote class="blockquote-note blockquote-note__info"><div class="blockquote-note__content"><ul>
+<li>Phân tích hành vi người mua hàng để đưa ra nhận định về khả năng mua hàng để đưa cho bộ phận chạy chiến dịch phù hợp với sản phẩm như cross-selling: Nói thẳng ra kết quả là mua bia phải mua thêm mồi vậy mồi gì thì cái đó hong biết nha</li>
+<li>Các quảng cáo của tiki, shopee hay các sàng TMĐT khác nó cứ hiện quảng cảo trên thiết bị động của bạn, khi bạn đã vô tình hay cố ý chạm nhẹ vào 1 mặc hàng nào đó.</li>
+<li>Đề xuất film gì đó mà ae ta hay <em>watch and chill</em></li>
+</ul>
+</div></blockquote>
+
+<p>  ✈ Nếu rõ hơn thì data-mining thuộc dòng dõi hiện đại của AI, Machine Learning, Deep Learning,… Nên muốn đào sâu hơn về nó thì hãy là một người có kiến thức về toán cao cấp </p>
+<p>  ✈ Tiếp đến thì trong bài post này mình sẽ nói tóm tắt sơ qua về quá trình mình <strong>copy và paste</strong> để build 1 project để báo cáo cuối kỳ. Ở đầy mình sẽ không nói nhiều gì về lý thuyết nên mọi người có thể cân nhắc. 🤛<br>  <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">Do that! do that! do do do ... that!</span><br><span class="line">  </span><br></pre></td></tr></table></figure></p>
+<h2 id="Van-Hanh"><a href="#Van-Hanh" class="headerlink" title="Vận Hành"></a>Vận Hành</h2><h3 id="Chuan-bi"><a href="#Chuan-bi" class="headerlink" title="Chuẩn bị"></a>Chuẩn bị</h3><ul>
+<li><p>Thứ nhất là mình đã may mắn học được 1 phó giáo sư, tiến sĩ vô cùng là vui vẻ, nhiệt huyết và giảng lại dễ hiễu nữa nên mình cũng có 1 đống vào đầu</p>
+</li>
+<li><p>Bên cạnh những bài lab thì mình cũng có xem qua 1 quyển sách về data mining theo mình là rất hay cho newbie như mình đó là: Python for Data Mining Quick Syntax Reference</p>
+<p align='center'>
+<image src="https://books.google.com.vn/books/content?id=ynWADwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&imgtk=AFLRE72tQxllMCbO9Qgk69AGgUssVzOOqaJaJ8sGZvQl51atOSaCe2V7vEPGOxLHBADwoBKXRmyodG_qmhxNIwamgziDqfB2MpXk-D7ALojTL0R_qA2UywSSsUBiXWAImWGle3UbQBt7" alt="image">
+</p>
+
+<ul>
+<li>Về cơ bản thì cuốn sách giới thiệu về tồng quan cấu trúc và các thư viện dùng phổ biến trong việc data-mining như pandas, Scipy, Numpy, Matplotlib, Scikit-learn,… Đồng thời nó cũng giợi ý các ý tưởng và data-set huyền thoại</li>
+</ul>
+</li>
+<li><p>Tiếp đến là mình tìm đến các khóa học online thì mình biết đến <a target="_blank" rel="noopener" href="https://www.datacamp.com/">datacamp</a> một nơi lý tưởng để học về data-mining:</p>
+<ul>
+<li>Dễ học, dễ hiểu với những anh Tây cao to giảng dạy</li>
+<li>Có từng project riêng cho mình lựa chọn</li>
+<li>Khi học mình sẽ có thể làm những bài test ứng với từng project để đánh giá và hiểu về những gì đang làm</li>
+<li>Hình như có cả chứng chỉ </li>
+<li>Đặc biệt ở đây sẽ giảng dạy với 3 ngôn ngữ chính đó là : Python, R, SQL</li>
+</ul>
+</li>
+<li><p>Cuối cùng là mình tìm tới anh google và khóa học Udemy để làm đến đồ án cuối kỳ của mình.</p>
+<ul>
+<li>khóa đó là: <a target="_blank" rel="noopener" href="https://www.udemy.com/course/complete-machine-learning-and-data-science-zero-to-mastery/">Complete-machine-learning-and-data-science-zero-to-mastery</a></li>
+<li>Khóa học khá dài thì tóm lại khóa học sẽ kết thúc với 2 projects rất là rỗ ràng là dự đoán bệnh tim và dự đoán giá tiền bất động sản với từng khu vực</li>
+</ul>
+<h3 id="Qua-trinh-chay-cong-viec-copy-amp-paste"><a href="#Qua-trinh-chay-cong-viec-copy-amp-paste" class="headerlink" title="Quá trình chạy công việc copy &amp; paste"></a>Quá trình chạy công việc copy &amp; paste</h3><h4 id="De-tai"><a href="#De-tai" class="headerlink" title="Đề tài:"></a><strong>Đề tài:</strong></h4></li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Dự đoán khả năng boom hàng của khách hàng trong thương mại điện tử </span><br></pre></td></tr></table></figure>
+<h4 id="Qua-trinh"><a href="#Qua-trinh" class="headerlink" title="Quá trình:"></a><strong>Quá trình:</strong></h4><ul>
+<li><p>Dữ liệu mà nhóm mình lấy là từ một start-up trong trường nên cũng về mặt lượng của data thì khá hạn chế nên nhóm rất chi là cân đo đong đếm để đưa ra mô hình dự doán chính xác nhất.</p>
+</li>
+<li><p>Đó là về mặt chuẩn bị dữ liệu, và việc làm sạch dữ liệu trong data-mining thì tương đối khó ăn. Việc này dựa vào kinh nghiệm với những bài học đã học với các logic và lib của anh pandas và trong báo cáo bên dưới mình cũng nói khá là chi tiết ⬇ </p>
+</li>
+<li><p>Tiếp đến là chạy các giải thuật có sẵn để build model với flow là:</p>
+<p align='center'>
+<image src="https://res.cloudinary.com/dypezmi3x/image/upload/v1610754524/blog/Data%20Mining%2C%20nh%E1%BB%AFng%20%C4%91i%E1%BB%81u%20b%C3%AD%20%E1%BA%A9n%20cho%20xu%20th%E1%BA%BF%20m%E1%BB%9Bi/129531663_429267898229909_361032239860457435_n.png_h2ihug.png" alt="image">
+</p>
+
+
+</li>
+</ul>
+<p>  Và kết quả tương ứng với thuật toán <strong>logistic regression</strong> là: </p>
+  <p align='center'>
+    <image src="https://res.cloudinary.com/dypezmi3x/image/upload/v1610754498/blog/Data%20Mining%2C%20nh%E1%BB%AFng%20%C4%91i%E1%BB%81u%20b%C3%AD%20%E1%BA%A9n%20cho%20xu%20th%E1%BA%BF%20m%E1%BB%9Bi/129758614_299092304761023_3267138957202039748_n.png_jtmps8.png" alt="image">
+ </p>
+  <p align='center'>
+    <image src="https://res.cloudinary.com/dypezmi3x/image/upload/v1610754542/blog/Data%20Mining%2C%20nh%E1%BB%AFng%20%C4%91i%E1%BB%81u%20b%C3%AD%20%E1%BA%A9n%20cho%20xu%20th%E1%BA%BF%20m%E1%BB%9Bi/129722203_395847688393415_1103281726513644169_n.png_vrnrcl.png" alt="image">
+ </p>
+
+<p>  Kết quả với độ chính xác tương đối cao</p>
+<h2 id="Ket-Qua"><a href="#Ket-Qua" class="headerlink" title="Kết Quả"></a>Kết Quả</h2><p>  Nói túm cái váy lại thì môn này rất hay và mình tin răng nó sẽ là xu thế mới cho Việt Nam giảng dạy để có thêm nhiều nhân tài (chớ nước ngoài là người ta tới âu r 😢) và chắc chắn có rất nhiều vị trí việc làm đang chờ đón bạn. </p>
+<p>  Bây giờ là thời điểm trước khi mình báo cáo 14 tiếng (ngày giờ báo cáo là 14h 9-12-2020). Và kết quả mình sẽ update sau 😋 Mình cũng upload tập báo cáo của mình cho các anh em có thể tham khảo và gạch đá cho mình về nó. <a target="_blank" rel="noopener" href="https://drive.google.com/file/d/1WefaQP6b_eXzpaNWNQp6B2OKc4-rFpjL/view?usp=sharing">Đây nè !</a> (<em>và pass là 251220</em>)</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">Thanks you ! 🤟 </span><br></pre></td></tr></table></figure>
+
+<blockquote class="blockquote-note blockquote-note__tip"><div class="blockquote-note__header"><div class="blockquote-note__icon"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="16" viewBox="0 0 12 16"><path fill-rule="evenodd" d="M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z"></path></svg></div>Bài toán</div><div class="blockquote-note__content"><p>  <em>“Có 30 tờ giấy gập đôi lại thì tờ thứ nhất được đánh với số trang là 1,2,119,120. Hỏi số trang đầy đủ của tờ có số trang là 75”</em></p>
+<ul>
+<li>cơ bản mình sẽ tìm ra quy luật<blockquote>
+<p> 1,2 ….. 119, 120<br> 3,4 ….. 117, 118<br> 5,6 ….. 115, 116<br>quy luật:  ((x.2)-1), (x.2) …… (120 - (x.2 -1)), 120 - (x-1).2</p>
+</blockquote>
+</li>
+</ul>
+<p>Do trang của 75 là nằm bên trái nên ta sẽ thay vào (120 - (x.2) - 1) = 75 để tìm ra x</p>
+<p> <strong>=&gt; kết quả là: 45,46 ….. 75,76</strong></p>
+</div></blockquote>
+    </div>
+     
+    <div class="post-footer__meta"><p>updated at 2022-09-26</p></div> 
+    <div class="post-entry__tags"><a href="/tags/do-an/" class="post-tags__link button"># đồ án</a><a href="/tags/data-mining/" class="post-tags__link button"># data mining</a><a href="/tags/python/" class="post-tags__link button"># python</a><a href="/tags/jupyter-notebook/" class="post-tags__link button"># jupyter notebook</a><a href="/tags/mystory/" class="post-tags__link button"># mystory</a></div> 
+</article>
+
+
+    <div class="nav">
+        <div class="nav__prev">
+            
+                <a href="/2020/12/21/ERP-manh-me-nhung-cu-click-di-vao-long-dat/" class="nav__link">
+                    <div>
+                        <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M589.088 790.624L310.464 512l278.624-278.624 45.248 45.248L400.96 512l233.376 233.376z" fill="#808080"></path></svg>
+                    </div>
+                    <div>
+                        <div class="nav__label">
+                            Previous Post
+                        </div>
+                        <div class="nav__title">
+                            ERP mạnh mẽ - những cú click đi vào lòng đất
+                        </div>
+                    </div>
+                </a>
+            
+        </div>
+        <div class="nav__next">
+            
+                <a href="/2020/11/30/Cam-hung-cho-bai-chem-gio-dau-tien/" class="nav__link">
+                    <div>
+                        <div class="nav__label">
+                            Next Post
+                        </div>
+                        <div class="nav__title">
+                            Cảm Hứng Cho Bài Chém Gió Đầu Tiên
+                        </div>
+                    </div>
+                    <div>
+                        <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M434.944 790.624l-45.248-45.248L623.04 512l-233.376-233.376 45.248-45.248L713.568 512z" fill="#808080"></path></svg>
+                    </div>
+                </a>
+            
+        </div>
+    </div>
+
+
+
+    <div class="post__comments post__with-toc content-card" id="comment">
+        
+    <h4>Comments</h4>
+    
+    <div id="disqus_thread">Unable to load Disqus, please make sure your network can access.</div>
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+    </div>
+
+
+
+</main>
+
+            <footer class="footer">
+     
+    <a href="#" class="button" id="b2t" aria-label="Back to Top" title="Back to Top">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="32" height="32">
+            <path d="M233.376 722.752L278.624 768 512 534.624 745.376 768l45.248-45.248L512 444.128zM192 352h640V288H192z" fill="currentColor"></path>
+        </svg>
+    </a>
+
+    
+
+
+    
+     
+ 
+
+ 
+    
+        
+        <p class="footer-copyright">
+            Copyright © 2022 <a href="/">kunion</a>
+        </p>
+    
+    
+    <p>Powered by <a href="https://hexo.io" target="_blank">Hexo</a> | Theme - <a href="https://github.com/ChrAlpha/hexo-theme-cards" target="_blank">Cards</a></p>
+</footer>
+
+        </div>
+        
+    <script defer src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.0/dist/lazyload.min.js"></script>
+    <script>
+        window.lazyLoadOptions = {
+            elements_selector: ".lazy",
+            threshold: 0
+        };
+    </script>
+ 
+
+ 
+    <script>
+        window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+        ga('create', '2184425220', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <script async src="https://www.google-analytics.com/analytics.js"></script>
+ 
+
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NPQ762SC6Z"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-NPQ762SC6Z');
+    </script>
+ 
+
+ 
+
+ 
+
+
+
+ 
+
+
+
+ 
+
+
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+
+    
+    <script>
+        function loadComment() {
+            window.disqus_config = function () {
+                this.page.url = 'https://kunuit.github.io/2020/12/05/Data-Mining-nhung-dieu-bi-an-cho-xu-the-moi/';
+                this.page.identifier = '2020/12/05/Data-Mining-nhung-dieu-bi-an-cho-xu-the-moi/';
+            };
+            (function(){
+                var dsq = document.createElement('script');
+                dsq.type = 'text/javascript';
+                dsq.async = true;
+                dsq.src = '//' + 'https-kunuit-github-io' + '.disqus.com/embed.js';
+                (document.head || document.body).appendChild(dsq);
+            })();
+        }
+    
+        var runningOnBrowser = typeof window !== "undefined";
+        var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
+        var supportsIntersectionObserver = runningOnBrowser && "IntersectionObserver" in window;
+    
+        setTimeout(function () {
+            if (!isBot && supportsIntersectionObserver) {
+                var comment_observer = new IntersectionObserver(function(entries) {
+                    if (entries[0].isIntersecting) {
+                        loadComment();
+                        comment_observer.disconnect();
+                    }
+                }, { threshold: [0] });
+                comment_observer.observe(document.getElementById('comment'));
+            } else {
+                loadComment();
+            }
+        }, 1);
+    </script>
+
+
+    
+    
+    
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+
+
+
+    </body>
+</html>

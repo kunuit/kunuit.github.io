@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+
+    
+
+    <!-- 渲染优化 -->
+    <meta name="renderer" content="webkit">
+    <meta name="force-rendering" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="HandheldFriendly" content="True" >
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!--icon-->
+
+    
+        <link rel="shortcut icon" href="https://res.cloudinary.com/dypezmi3x/image/upload/v1619285500/blog/pngwing.com_qserka.png">
+    
+    
+        <link rel="icon" type="image/png" sizes="16x16" href="https://res.cloudinary.com/dypezmi3x/image/upload/v1619285500/blog/pngwing.com_qserka.png">
+    
+    
+        <link rel="icon" type="image/png" sizes="32x32" href="https://res.cloudinary.com/dypezmi3x/image/upload/v1619285500/blog/pngwing.com_1_iyn0du.png">
+    
+    
+        <link rel="apple-touch-icon" sizes="180x180" href="https://res.cloudinary.com/dypezmi3x/image/upload/v1619285500/blog/pngwing.com_2_ql7pjp.png">
+    
+    
+        <link rel="mask-icon" href="https://res.cloudinary.com/dypezmi3x/image/upload/v1619285500/blog/pngwing.com_2_ql7pjp.png">
+    
+
+
+    <!-- meta -->
+
+
+<title>Nối Chữ Việt Nam - Nơi Thách Thức Ngôn Ngữ | kunion</title>
+
+
+    <meta name="keywords" content="Nối Chữ VN, bot, webhook, Kun có Page">
+
+
+
+
+    <!-- OpenGraph -->
+ 
+    <meta name="description" content="Đúng với cái tên của blog này là một trang Page @NoiChuVN với mục đích chơi game nối chữ trên messenger. Trong blog lần này thứ nhất là giới thiệu sơ qua về Page, thứ hai là công nghệ triển khai con">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Nối Chữ Việt Nam - Nơi Thách Thức Ngôn Ngữ">
+<meta property="og:url" content="https://kunuit.github.io/2021/01/17/Noi-Chu-Viet-Nam-Noi-Thach-Thuc-Ngon-Ngu/index.html">
+<meta property="og:site_name" content="kunion">
+<meta property="og:description" content="Đúng với cái tên của blog này là một trang Page @NoiChuVN với mục đích chơi game nối chữ trên messenger. Trong blog lần này thứ nhất là giới thiệu sơ qua về Page, thứ hai là công nghệ triển khai con">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://res.cloudinary.com/dypezmi3x/image/upload/v1610896941/blog/N%E1%BB%91i%20Ch%E1%BB%AF%20Vi%E1%BB%87t%20Nam%20-%20N%E1%BB%9Bi%20Th%C3%A1ch%20Th%E1%BB%A9c%20Ng%C3%B4n%20Ng%E1%BB%AF/133308936_411497070295319_5020370453125849408_n.png_seqygs.png">
+<meta property="article:published_time" content="2021-01-17T14:45:55.000Z">
+<meta property="article:modified_time" content="2022-09-26T13:44:53.060Z">
+<meta property="article:author" content="kunion">
+<meta property="article:tag" content="Nối Chữ VN">
+<meta property="article:tag" content="bot">
+<meta property="article:tag" content="webhook">
+<meta property="article:tag" content="Kun có Page">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://res.cloudinary.com/dypezmi3x/image/upload/v1610896941/blog/N%E1%BB%91i%20Ch%E1%BB%AF%20Vi%E1%BB%87t%20Nam%20-%20N%E1%BB%9Bi%20Th%C3%A1ch%20Th%E1%BB%A9c%20Ng%C3%B4n%20Ng%E1%BB%AF/133308936_411497070295319_5020370453125849408_n.png_seqygs.png">
+
+
+    
+<link rel="stylesheet" href="/css/style/main.css">
+ 
+
+    
+    
+        <link rel="stylesheet" id="hl-default-theme" href="/css/highlight/default.css" media="none" >
+        
+            <link rel="stylesheet" id="hl-dark-theme" href="/css/highlight/dark.css" media="none">
+        
+    
+
+    
+    
+
+    
+    
+<link rel="stylesheet" href="/css/style/dark.css">
+
+    
+<script src="/js/darkmode.js"></script>
+
+
+
+     
+
+    <!-- custom head -->
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+    <body>
+        <div id="app" tabindex="-1">
+            <header class="header">
+    <div class="header__left">
+        <a href="/" class="button">
+            <span class="logo__text">Kunion</span>
+        </a>
+    </div>
+    <div class="header__right">
+        
+            <div class="navbar__menus">
+                
+                    <a href="/" class="navbar-menu button">Home</a>
+                
+                    <a href="/tags/" class="navbar-menu button">Tags</a>
+                
+                    <a href="/archives/" class="navbar-menu button">Archives</a>
+                
+                    <a href="/friends/" class="navbar-menu button">Contracts</a>
+                
+                    <a href="/page/" class="navbar-menu button">Page</a>
+                
+            </div>
+        
+        
+        
+    <a href="/search/" id="btn-search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="24" height="24" fill="currentColor" stroke="currentColor" stroke-width="32"><path d="M192 448c0-141.152 114.848-256 256-256s256 114.848 256 256-114.848 256-256 256-256-114.848-256-256z m710.624 409.376l-206.88-206.88A318.784 318.784 0 0 0 768 448c0-176.736-143.264-320-320-320S128 271.264 128 448s143.264 320 320 320a318.784 318.784 0 0 0 202.496-72.256l206.88 206.88 45.248-45.248z"></path></svg>
+    </a>
+
+
+        
+        
+    <a href="javaScript:void(0);" id="btn-toggle-dark">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+    </a>
+
+
+        
+            <a class="dropdown-icon button" id="btn-dropdown" tabindex="0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width='24' height='24' fill="none" stroke="currentColor" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round"><path fill="currentColor" d="M3.314,4.8h13.372c0.41,0,0.743-0.333,0.743-0.743c0-0.41-0.333-0.743-0.743-0.743H3.314c-0.41,0-0.743,0.333-0.743,0.743C2.571,4.467,2.904,4.8,3.314,4.8z M16.686,15.2H3.314c-0.41,0-0.743,0.333-0.743,0.743s0.333,0.743,0.743,0.743h13.372c0.41,0,0.743-0.333,0.743-0.743S17.096,15.2,16.686,15.2z M16.686,9.257H3.314c-0.41,0-0.743,0.333-0.743,0.743s0.333,0.743,0.743,0.743h13.372c0.41,0,0.743-0.333,0.743-0.743S17.096,9.257,16.686,9.257z"></path></svg></a>
+            <div class="dropdown-menus" id="dropdown-menus">
+                
+                    <a href="/" class="dropdown-menu button">Home</a>
+                
+                    <a href="/tags/" class="dropdown-menu button">Tags</a>
+                
+                    <a href="/archives/" class="dropdown-menu button">Archives</a>
+                
+                    <a href="/friends/" class="dropdown-menu button">Contracts</a>
+                
+                    <a href="/page/" class="dropdown-menu button">Page</a>
+                
+            </div>
+        
+    </div>
+</header>
+
+
+            <main class="main">
+    
+
+<div class="post-title">
+    <h1 class="post-title__text">
+        Nối Chữ Việt Nam - Nơi Thách Thức Ngôn Ngữ
+    </h1>
+    <div class="post-title__meta">
+        <a href="/archives/2021/01/" class="post-meta__date button">2021-01-17</a>
+        
+ 
+        
+    
+    
+
+
+ 
+
+ 
+    </div>
+</div>
+
+
+    <aside class="post-side">
+        <div class="post-side__toc">
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Gioi-thieu"><span class="toc-number">1.</span> <span class="toc-text">Giới thiệu</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Cong-nghe-trien-khai"><span class="toc-number">2.</span> <span class="toc-text">Công nghệ triển khai</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Cam-Nghi"><span class="toc-number">3.</span> <span class="toc-text">Cảm Nghĩ</span></a></li></ol>
+        </div>
+    </aside>
+    <a class="btn-toc button" id="btn-toc" tabindex="0">
+        <svg viewBox="0 0 1024 1024" width="32" height="32" xmlns="http://www.w3.org/2000/svg">
+            <path d="M128 256h64V192H128zM320 256h576V192H320zM128 544h64v-64H128zM320 544h576v-64H320zM128 832h64v-64H128zM320 832h576v-64H320z" fill="currentColor"></path>
+        </svg>
+    </a>
+    <div class="toc-menus" id="toc-menus">
+        <div class="toc-title">Article Directory</div>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Gioi-thieu"><span class="toc-number">1.</span> <span class="toc-text">Giới thiệu</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Cong-nghe-trien-khai"><span class="toc-number">2.</span> <span class="toc-text">Công nghệ triển khai</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Cam-Nghi"><span class="toc-number">3.</span> <span class="toc-text">Cảm Nghĩ</span></a></li></ol>
+    </div>
+
+
+<article class="post post__with-toc content-card">
+    <div class="post__header"></div>
+    <div class="post__content">
+        <p>  Đúng với cái tên của blog này là một trang Page <a target="_blank" rel="noopener" href="https://www.facebook.com/NoiChuVN">@NoiChuVN</a> với mục đích chơi game nối chữ trên messenger. Trong blog lần này thứ nhất là giới thiệu sơ qua về Page, thứ hai là công nghệ triển khai con bot, cuối cùng là cảm nghĩ của mình về Page. Tới đây thì mình xin cảm ơn các bạn đã theo dõi blog của mình giờ thì bắt đầu thôi.</p>
+  <p align='center'>
+    <img src="https://res.cloudinary.com/dypezmi3x/image/upload/v1610896941/blog/N%E1%BB%91i%20Ch%E1%BB%AF%20Vi%E1%BB%87t%20Nam%20-%20N%E1%BB%9Bi%20Th%C3%A1ch%20Th%E1%BB%A9c%20Ng%C3%B4n%20Ng%E1%BB%AF/133308936_411497070295319_5020370453125849408_n.png_seqygs.png" class="lazy" data-srcset="https://res.cloudinary.com/dypezmi3x/image/upload/v1610896941/blog/N%E1%BB%91i%20Ch%E1%BB%AF%20Vi%E1%BB%87t%20Nam%20-%20N%E1%BB%9Bi%20Th%C3%A1ch%20Th%E1%BB%A9c%20Ng%C3%B4n%20Ng%E1%BB%AF/133308936_411497070295319_5020370453125849408_n.png_seqygs.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAABlBMVEXMzMyWlpYU2uzLAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAACklEQVQImWNgAAAAAgAB9HFkpgAAAABJRU5ErkJggg==" alt="PAGE" >
+  </p>
+
+
+
+<h2 id="Gioi-thieu"><a href="#Gioi-thieu" class="headerlink" title="Giới thiệu"></a>Giới thiệu</h2><blockquote>
+<p><strong>Hoàn cảnh và ý tưởng:</strong></p>
+</blockquote>
+<ul>
+<li>Cũng khá lâu do phong trào nối chữ từ những buổi stream của anh Độ Mixi. Sau đó một thời gian mình có chơi cùng các bạn của mình thì bọn mình nhận ra một điều bất cập là phải nhớ từ và thời gian không được công bằng giữa các người chơi, bên cạnh cũng không biết từ đó có nghĩa hay không. Và thế là bọn mình đã có động lực để viết vài dòng code để luyện tập rồi.</li>
+</ul>
+<blockquote>
+<p><strong>Quá trình trải qua</strong></p>
+</blockquote>
+<ul>
+<li>Sau đó là tụi mình triển khai với khả năng của tụi nhưng chỉ build được back-end và cũng đã đá qua front-end và socket nhưng giao diện xấu và cũng ít kinh nghiệm với react nên tạm thời bỏ đó và không biết khi nào mới đụng lại - “lúc này trend lắm ra quán cafe ở quê còn thấy mấy đứa nhỏ chơi nhưng vẫn phải từ bỏ”</li>
+<li>Một thời gian gần Noel thì mình có tìm hiểu webhook và webhook là gì và cách setup thì các bạn có thể xem <a target="_blank" rel="noopener" href="https://developers.facebook.com/docs/messenger-platform/webhook">tại đây</a>. Lúc này muốn làm một con chat bot gì đó mà liên quan tới Ai vì thấy mấy môn bên khoa học dữ liệu nó hay quá. Nhưng lại nhớ ra cái server cũ của nối chữ nó phù hợp với cái webhook này với cơ chế nhận và trả. Và do phía bên dưới cũng đã có nên việc hoàn thành con bot này cũng khá nhanh.</li>
+</ul>
+<h2 id="Cong-nghe-trien-khai"><a href="#Cong-nghe-trien-khai" class="headerlink" title="Công nghệ triển khai"></a>Công nghệ triển khai</h2><blockquote>
+<p>Do mình đã định hướng sẵn là sẽ theo javascript nên hầu hết công nghệ cũng là từ javascript:</p>
+</blockquote>
+<ul>
+<li>Sài thằng express của nodejs “Những lần sau mình sẽ sài thằng Nestjs vì mới học thấy nó support nhiều cái lắm”.</li>
+<li>RESTfull API “Mình đã thấy sức mạnh của Graphql nên lần sau sẽ là nó”.</li>
+<li>Cache thì mình sài Redis - nó rất rất là nhanh vì nó truy cập thẳng tới disk để truy xuât.</li>
+<li>Database thì là mongodb.</li>
+<li>Server thì mình sài 2 vps của <a target="_blank" rel="noopener" href="https://aws.amazon.com/ec2/?ec2-whats-new.sort-by=item.additionalFields.postDateTime&ec2-whats-new.sort-order=desc">EC2 aws</a> và 1 domain của <a target="_blank" rel="noopener" href="http://name.com/">name.com</a> “set-up nginx và pm2 đầy đủ”.</li>
+<li>Cuối cùng là webhook của anh Zuckerberg - là kênh liên lạc giữa messenger và phía bên dưới của bot.</li>
+</ul>
+<h2 id="Cam-Nghi"><a href="#Cam-Nghi" class="headerlink" title="Cảm Nghĩ"></a>Cảm Nghĩ</h2><ul>
+<li>Lời đầu tiên là lời cảm ơn tới những người bạn mình và cũng như những người anh trong hội lập trình đã trải nghiệm và đóng góp những ý hay giúp bot mình hoàn thiện hơn.</li>
+<li>Mình rất vui với những phản hồi dù nó những lời cay cú từ người dùng cho con bot vì mình cũng trải qua cảm giác ức chế với con bot mình mừ.</li>
+<li>Khi release thì con bot mình cũng được đón nhận kha khá và mình nhận ra việc quảng cáo và tiếp cận tới mọi người nó quan trọng tới chừng nào. Vì vậy mình có thể rút ra rằng: Khi muốn triển khai một ứng dụng hay gì đó thì mình cần có sự kết hợp giữa nhiều bên chẵng hạn như marketing, IT, … lại với nhau để đem đến hiệu quả cao nhất.</li>
+<li>À việc triển khai cũng không thể là không có chi phí duy trì và server mình cũng bốc hơi kha khá mana. Từ đó mới thấy những doanh nghiệp start-up nó đốt money như thế nào. Và do mình cũng không có nhiều mana nên con bot này sau một thời gian mình sẽ phải đóng lại - lúc đó mình sẽ rất buồn đó.</li>
+<li>Cuối cùng thì mình nhận ra con bot mình không có khả năng giữ chân khách hàng mà việc này rất quan trọng. Nên lần sau khi phát triển ứng dụng thì mình sẽ chú trọng về vấn đề này hơn để cung cấp nhiều chức năng phù hợp. Chẳng hạng như bảng xếp hạng, tương tác giữa người với người, discount (cái này chắc phải full ống mana),…</li>
+<li>Ngoài lề một xíu thì thì mấy đứa bạn mình nói mình là “Kun no Page” nhưng giờ thì mình đã có Page nên mình là “Kun có Page” nha 😇 hiểu sao hiểu nhưng mình rất vui khi có Page.</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">`Hi vọng các bạn sẽ đón nhận những blog và ứng dụng mới của mình`</span></span><br></pre></td></tr></table></figure>
+    </div>
+     
+    <div class="post-footer__meta"><p>updated at 2022-09-26</p></div> 
+    <div class="post-entry__tags"><a href="/tags/Noi-Chu-VN/" class="post-tags__link button"># Nối Chữ VN</a><a href="/tags/bot/" class="post-tags__link button"># bot</a><a href="/tags/webhook/" class="post-tags__link button"># webhook</a><a href="/tags/Kun-co-Page/" class="post-tags__link button"># Kun có Page</a></div> 
+</article>
+
+
+    <div class="nav">
+        <div class="nav__prev">
+            
+                <a href="/2021/01/30/Nui-Chua-Chan-con-toi-chua-ai/" class="nav__link">
+                    <div>
+                        <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M589.088 790.624L310.464 512l278.624-278.624 45.248 45.248L400.96 512l233.376 233.376z" fill="#808080"></path></svg>
+                    </div>
+                    <div>
+                        <div class="nav__label">
+                            Previous Post
+                        </div>
+                        <div class="nav__title">
+                            Núi Chứa Chan và tôi chứa ai ?
+                        </div>
+                    </div>
+                </a>
+            
+        </div>
+        <div class="nav__next">
+            
+                <a href="/2021/01/01/Trai-nghiem-muot-ma-Medium-com-cac-trang-bi-chan-chap-lun-cac-nha-mang-Viet-Nam/" class="nav__link">
+                    <div>
+                        <div class="nav__label">
+                            Next Post
+                        </div>
+                        <div class="nav__title">
+                            Trải nghiệm mượt mà Medium.com (các trang bị chặn), chấp lun các nhà mạng Việt Nam
+                        </div>
+                    </div>
+                    <div>
+                        <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M434.944 790.624l-45.248-45.248L623.04 512l-233.376-233.376 45.248-45.248L713.568 512z" fill="#808080"></path></svg>
+                    </div>
+                </a>
+            
+        </div>
+    </div>
+
+
+
+    <div class="post__comments post__with-toc content-card" id="comment">
+        
+    <h4>Comments</h4>
+    
+    <div id="disqus_thread">Unable to load Disqus, please make sure your network can access.</div>
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+    </div>
+
+
+
+</main>
+
+            <footer class="footer">
+     
+    <a href="#" class="button" id="b2t" aria-label="Back to Top" title="Back to Top">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="32" height="32">
+            <path d="M233.376 722.752L278.624 768 512 534.624 745.376 768l45.248-45.248L512 444.128zM192 352h640V288H192z" fill="currentColor"></path>
+        </svg>
+    </a>
+
+    
+
+
+    
+     
+ 
+
+ 
+    
+        
+        <p class="footer-copyright">
+            Copyright © 2022 <a href="/">kunion</a>
+        </p>
+    
+    
+    <p>Powered by <a href="https://hexo.io" target="_blank">Hexo</a> | Theme - <a href="https://github.com/ChrAlpha/hexo-theme-cards" target="_blank">Cards</a></p>
+</footer>
+
+        </div>
+        
+    <script defer src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.0/dist/lazyload.min.js"></script>
+    <script>
+        window.lazyLoadOptions = {
+            elements_selector: ".lazy",
+            threshold: 0
+        };
+    </script>
+ 
+
+ 
+    <script>
+        window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+        ga('create', '2184425220', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <script async src="https://www.google-analytics.com/analytics.js"></script>
+ 
+
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NPQ762SC6Z"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-NPQ762SC6Z');
+    </script>
+ 
+
+ 
+
+ 
+
+
+
+ 
+
+
+
+ 
+
+
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+
+    
+    <script>
+        function loadComment() {
+            window.disqus_config = function () {
+                this.page.url = 'https://kunuit.github.io/2021/01/17/Noi-Chu-Viet-Nam-Noi-Thach-Thuc-Ngon-Ngu/';
+                this.page.identifier = '2021/01/17/Noi-Chu-Viet-Nam-Noi-Thach-Thuc-Ngon-Ngu/';
+            };
+            (function(){
+                var dsq = document.createElement('script');
+                dsq.type = 'text/javascript';
+                dsq.async = true;
+                dsq.src = '//' + 'https-kunuit-github-io' + '.disqus.com/embed.js';
+                (document.head || document.body).appendChild(dsq);
+            })();
+        }
+    
+        var runningOnBrowser = typeof window !== "undefined";
+        var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
+        var supportsIntersectionObserver = runningOnBrowser && "IntersectionObserver" in window;
+    
+        setTimeout(function () {
+            if (!isBot && supportsIntersectionObserver) {
+                var comment_observer = new IntersectionObserver(function(entries) {
+                    if (entries[0].isIntersecting) {
+                        loadComment();
+                        comment_observer.disconnect();
+                    }
+                }, { threshold: [0] });
+                comment_observer.observe(document.getElementById('comment'));
+            } else {
+                loadComment();
+            }
+        }, 1);
+    </script>
+
+
+    
+    
+    
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+
+
+
+    </body>
+</html>
